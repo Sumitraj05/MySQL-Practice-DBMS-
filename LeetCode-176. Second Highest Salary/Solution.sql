@@ -11,7 +11,7 @@ SELECT MAX(salary) AS SecondHighestSalary
 FROM Employee
 WHERE salary < (SELECT MAX(salary) FROM Employee);
 
--- Method 3 - Using DENSE_ROW function 
+-- Method 3 - Using DENSE_RANK function 
 SELECT (
     SELECT DISTINCT salary
     FROM (
